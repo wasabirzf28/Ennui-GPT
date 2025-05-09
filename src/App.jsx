@@ -2,6 +2,7 @@ import { useState , useEffect } from 'react';
 import HomePage from './Pages/HomePage';
 import BoredChatPage from './Pages/ChatBot';
 import Loader from './assets/Loader';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home'); // Page actuelle
@@ -39,6 +40,7 @@ export default function App() {
       <div>
         {loading ? <Loader /> : HomePage}
       </div>
+      <Analytics />
     </div>
   );
 }
